@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./icons/css/icon.css">
+</head>
+<body>
+  <audio id="sound"></audio>
+  <div class="main">
+    <div class="activity">
+      <div class="history">
+        <div class="text-head-history">
+          <p>history</p>
+          <span><i class="sbi-timeline"></i></span>
+        </div>
+        <p class="box-text"><span>8</span> Words</p> 
+      </div>
+      <div class="starred">
+        <div class="text-head-starred">
+          <p>Starred</p>
+          <span><i class="sbi-star-outlined"></i></span>
+        </div>
+        <p class="box-text"><span>32</span>words</p>
+        </div>
+    </div>
+    <div class="search-box">
+      <input type="text" class="input" placeholder="Enter the word.." id="inp-word">
+      <button id="search-btn"><span><i class="sbi-send1"></i></span></button>
+    </div>
+    <div class="design_box">
+      <div class="dictation-box">
+        <div class="result" id="result">
+        </div>
+      </div>
+      <div class="design1"></div>
+      <div class="design2"></div>
+    </div>
+    <div class="footer">
+      <button class="speak" onclick="playSound()"><span><i class="sbi-sound"></i></span></button>
+      <button class="mic"><span><i class="sbi-microphone"></i></span></button>
+      <button class="star"><span><i class="sbi-star-outlined"></i></span></button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
