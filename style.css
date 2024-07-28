@@ -8,13 +8,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #e46d1d;
 }
 .main{
   height: 100vh;
   max-height: 100vh;
   min-width: 320px;
   max-width: 480px;
-  background: rgb(224, 221, 223);
+  background: #D65400
 }
 .activity{
  display: flex;
@@ -26,11 +27,11 @@ body{
 }
 .history {  
   margin: 10px 0 0 40px; 
-  width: 150px;
+  width: 200px;
   height: 60px;
   border-radius: 10px;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.1);
-  background: #fff; 
+  background: linear-gradient(145deg, #B64700, #F66100);
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
 }
 .history .text-head-history{
   display: flex;
@@ -41,18 +42,22 @@ body{
   padding: 5px 5px 0px 10px;
 }
 .history .text-head-history span{
-  color: #ff0000;
+  color: #ffdd00;
 }
 .history .box-text{
   padding-left: 10px;
+  color: #fff;
+  opacity: 1;
 }
 .starred{
   margin: 10px 40px 0px 0px;
-  width: 150px;
+  width: 200px;
   height: 60px;
   border-radius: 10px;
   box-shadow: 0 10px 16px rgba(0,0,0,0.1);
   background: #fff;
+  background: linear-gradient(145deg, #B64700, #F66100);
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
 }
 .starred .text-head-starred{
   display: flex;
@@ -72,6 +77,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+.search-box ::placeholder{
+  color: #fff;
+  opacity: 1;
 }
 .search-box input{
   height: 50px;
@@ -81,53 +91,42 @@ body{
   border: none;
   font-size: 15px;
   border-radius: 5px 0 0 5px;
-  background-color: #fff;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.1);
+  color: white;
+  background: #D65400;
+  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
 }
 .search-box button {
   height: 50px;
   width: 10%;
-  border-radius: 0 5px 5px 0px;
   border: none;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.1);
-  background: #fff;
   outline: none;
   cursor: pointer;
+  border-radius: 100%;
+  background: linear-gradient(145deg, #FE6400, #AE4400);
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+}
+.search-box button :hover{
+  color: #fff;
+  background: linear-gradient(145deg, #AE4400, #FE6400);
+  border-radius: 100%;
+  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
 }
 .design_box{
   height: 400px;
   width: 100%;
   margin-top: 30px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dictation-box{
   height: 380px;
   width: 300px;
   background: rgb(236, 156, 182);
-  margin-top: 10px;
-  margin-left: 20px;
   border-radius: 10px;
-  position: absolute;
-  z-index: 2;
-}
-.design1{
-  height: 350px;
-  width: 260px;
-  background: rgb(20, 176, 243);
-  position: absolute;
-  top: 20px;
-  left: 70px;
-  border-radius: 15px;
-  z-index: 1;
-}
-.design2{
-  height: 310px;
-  width: 220px;
-  background: rgb(5, 5, 5);
-  position: relative;
-  top: 35px;
-  left: 118px;
-  border-radius: 15px;
+  background: #D65400;
+  border-radius: 15%;
+  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
 }
 .result{
   position: relative;
@@ -172,44 +171,49 @@ body{
 .speak{
   height: 70px;
   width: 70px;
-  border-radius: 10px;
   border: none;
   text-align: center;
-  background: #fff;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.2);
   cursor: pointer;
+  background: linear-gradient(145deg, #B64700, #F66100);
+  border-radius: 15%;
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
 }
 .speak span{
   font-size: 20px;
+  color: #fff;
 }
 .mic{
   height: 70px;
   width: 70px;
-  border-radius: 10px;
   border: none;
   text-align: center;
-  background: #fff;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.2);
   cursor: pointer;
+  background: linear-gradient(145deg, #B64700, #F66100);
+  border-radius: 15%;
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
 }
 .mic span{
   font-size: 20px;
+  color: #fff;
 }
 .star{
   height: 70px;
   width: 70px;
-  border-radius: 10px;
   border: none;
   text-align: center;
-  background: #fff;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.2);
   cursor: pointer;
+  background: linear-gradient(145deg, #B64700, #F66100);
+  border-radius: 15%;
+  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
 }
 .star span{
   font-size: 20px;
+  color: #fff;
 }
 .footer button:hover{
-  background: #101010;
   color: #fff;
+  background: #D65400;
+  border-radius: 15%;
+  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
 }
 

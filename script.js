@@ -1,8 +1,7 @@
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
-const sound = document.getElementById("sound");
 const btn = document.getElementById("search-btn");
-// const speak = document.getElementById("speak");
+
 
 btn.addEventListener("click", () => {
   let inpword = document.getElementById("inp-word").value;
@@ -23,15 +22,30 @@ btn.addEventListener("click", () => {
           <p class="word-example">
             ${data[0].meanings[0].definitions[0].example || ""}
           </p>`;
-
-          sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
-          console.log(sound);
   });
 });
 
-function playSound(){
-  sound.play();
-}
+let speech = new SpeechSynthesisUtterance();
+let voices = [];
+
+  window.speechSynthesis.onvoiceschanged = () => {
+  voices = window.speechSynthesis.getVoices();
+  speech.voice = voices[12];
+};
+
+ document.querySelector(".speak").addEventListener('click', () => {
+  let inputText = document.getElementById('inp-word').value;
+
+  if (inputText && inputText.trim().split(' ').length === 1){
+    speech.text = inputText;
+    window.speechSynthesis.speak(speech);
+  }else{
+    // console.log("no..");
+    alert("please enter only the word");
+  }
+
+
+})
 
 
 
