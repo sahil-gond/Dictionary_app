@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History</title>
+  <link rel="stylesheet" href="CSS/history_page.css">
+  <link rel="stylesheet" href="./icons/css/icon.css">
+</head>
+<body>
+  <div class="hist-main">
+    <div class="hist-head">
+      <h3>History</h3>
+    </div> 
+    <div class="historyList">
+    <ul id="list-container">
+      <!-- <li class="hist-container">tasl 1 <span><i class="sbi-delete-forever"></i></span></li>
+      <li class="hist-container">task 2</li>
+      <li class="hist-container">task 3</li> -->
+    </ul>
+    </div>
+    <div class="back-btn">
+      <button>
+          <span><a href="index.html">
+            <i class="sbi-back"></i></span>
+          </a>
+      </button>
+    </div>
+  </div>
+  <script>
+const listContainer = document.getElementById('list-container');
+// Retrieve and parse data from localStorage
+let tasks = JSON.parse(localStorage.getItem('input-word')) || [];
+
+// Function to display the tasks
+function showData() {
+  listContainer.innerHTML = ''; // Clear existing list
+  tasks.forEach((task, index) => {
+    let listItem = document.createElement('li');
+    listItem.className = 'hist-container';
+    listItem.textContent = task;
+
+    // Create a delete button/icon
+    let deleteSpan = document.createElement('span');
+    let deleteIcon = document.createElement('i');
+    deleteIcon.className = 'sbi-delete-forever';
+    deleteSpan.appendChild(deleteIcon);
+    listItem.appendChild(deleteSpan);
+
+    // Add delete functionality
+    deleteSpan.addEventListener('click', () => {
+      deleteTask(index);
+    });
+
+    listContainer.appendChild(listItem);
+  });
+}
+
+// Function to save the current tasks to localStorage
+function saveData() {
+  localStorage.setItem('input-word', JSON.stringify(tasks));
+}
+
+// Function to delete a task
+function deleteTask(index) {
+  tasks.splice(index, 1); // Remove task from the array
+  saveData(); // Update localStorage
+  showData(); // Update the displayed list
+  updateHistoryCount(); // Update the history count
+}
+
+// Function to update the history count
+function updateHistoryCount() {
+  let a = tasks.length;
+  localStorage.setItem('wordCount', a);
+  const numb = document.getElementById('hist-number');
+  numb.innerHTML = a < 10 ? "0" + a : a;
+}
+
+// Initial call to display data
+showData();
+updateHistoryCount();
+
+
+
+  </script>
+</body>
+</html>

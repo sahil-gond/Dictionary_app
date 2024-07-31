@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictionary</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="./icons/css/icon.css">
 </head>
 <body>
   <audio id="sound"></audio>
-  <div class="main">
+  <div class="main" id="main">
     <div class="activity">
-      <div class="history">
-        <div class="text-head-history">
-          <p>history</p>
-          <span><i class="sbi-timeline"></i></span>
-        </div>
-        <p class="box-text"><span>8</span> Words</p> 
+      <div class="history" onclick="history() "> 
+          <div class="text-head-history">
+            <p>history</p>
+            <span><i class="sbi-timeline"></i></span>
+          </div>
+          <p class="box-text"><span id="hist-number">0</span> Words</p> 
       </div>
-      <div class="starred">
+      <div class="starred" onclick="starred() ">
         <div class="text-head-starred">
           <p>Starred</p>
           <span><i class="sbi-star-outlined"></i></span>
         </div>
-        <p class="box-text"><span>32</span>words</p>
+        <p class="box-text"><span id="star-number">0</span> words</p>
         </div>
+    </div>
+    <div class="updates">
+      <p>working on starred srction</p>
     </div>
     <div class="search-box">
       <input type="text" class="input" placeholder="Enter the word.." id="inp-word">
@@ -37,9 +40,9 @@
       </div>
     </div>
     <div class="footer">
-      <button class="speak"><span><i class="sbi-sound"></i></span></button>
-      <button class="mic"><span><i class="sbi-microphone"></i></span></button>
-      <button class="star"><span><i class="sbi-star-outlined"></i></span></button>
+      <button class="speak footer-buttons"><span><i class="sbi-sound"></i></span></button>
+      <button class="mic footer-buttons"><span><i class="sbi-microphone"></i></span></button>
+      <button class="star footer-buttons"><span><i class="sbi-star-outlined"></i></span></button>
     </div>
   </div>
   <script src="script.js"></script>

@@ -2,20 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+
   /* border: 1px solid red; */
 }
 body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e46d1d;
+  height: 100svh;
+  width: 100svw;
+  background: #8a96ab;
 }
 .main{
   height: 100vh;
   max-height: 100vh;
   min-width: 320px;
   max-width: 480px;
-  background: #D65400
+  background: linear-gradient(145deg, #8a96ab, #CADCFC);
+  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
 }
 .activity{
  display: flex;
@@ -30,8 +36,8 @@ body{
   width: 200px;
   height: 60px;
   border-radius: 10px;
-  background: linear-gradient(145deg, #B64700, #F66100);
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  background: linear-gradient(145deg, #8a96ab, #CADCFC);
+  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
 }
 .history .text-head-history{
   display: flex;
@@ -40,13 +46,14 @@ body{
   font-weight: 800;
   font-size: 20px;
   padding: 5px 5px 0px 10px;
+  color: #00246B;
 }
 .history .text-head-history span{
-  color: #ffdd00;
+  color: #00246B;
 }
 .history .box-text{
   padding-left: 10px;
-  color: #fff;
+  color: #00246B;
   opacity: 1;
 }
 .starred{
@@ -54,10 +61,8 @@ body{
   width: 200px;
   height: 60px;
   border-radius: 10px;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.1);
-  background: #fff;
-  background: linear-gradient(145deg, #B64700, #F66100);
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  background: linear-gradient(145deg, #8a96ab, #CADCFC);
+  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
 }
 .starred .text-head-starred{
   display: flex;
@@ -66,12 +71,22 @@ body{
   font-weight: 800;
   font-size: 20px;
   padding: 5px 5px 0px 10px;
+  color: #00246B;
 }
 .starred .text-head-starred span{
-  color: #ffdd00;
+  color: #00246B;
 }
 .starred .box-text{
   padding-left: 10px;
+  color: #00246B;
+}
+.updates{
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(126, 4, 4);
 }
 .search-box{
   display: flex;
@@ -80,7 +95,7 @@ body{
   gap: 10px;
 }
 .search-box ::placeholder{
-  color: #fff;
+  color: #00246B;
   opacity: 1;
 }
 .search-box input{
@@ -92,8 +107,8 @@ body{
   font-size: 15px;
   border-radius: 5px 0 0 5px;
   color: white;
-  background: #D65400;
-  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
+  background: #8a96ab;
+  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
 }
 .search-box button {
   height: 50px;
@@ -102,14 +117,15 @@ body{
   outline: none;
   cursor: pointer;
   border-radius: 100%;
-  background: linear-gradient(145deg, #FE6400, #AE4400);
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  border-radius: 15%;
+  background: linear-gradient(145deg, #8a96ab, #CADCFC);
+  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
 }
-.search-box button :hover{
+.search-box button:hover{
   color: #fff;
-  background: linear-gradient(145deg, #AE4400, #FE6400);
-  border-radius: 100%;
-  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
+  background: #8a96ab;
+  border-radius: 15%;
+  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
 }
 .design_box{
   height: 400px;
@@ -122,11 +138,9 @@ body{
 .dictation-box{
   height: 380px;
   width: 300px;
-  background: rgb(236, 156, 182);
-  border-radius: 10px;
-  background: #D65400;
   border-radius: 15%;
-  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
+  background: #8a96ab;
+  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
 }
 .result{
   position: relative;
@@ -134,7 +148,7 @@ body{
 }
 .result h3{
   font-size: 30px;
-  color: #1f194c;
+  color: #00246B;
 
 }
 .result .word{
@@ -168,52 +182,33 @@ body{
   justify-content: center;
   gap: 25px;
 }
-.speak{
+.footer-buttons{
   height: 70px;
   width: 70px;
   border: none;
   text-align: center;
   cursor: pointer;
-  background: linear-gradient(145deg, #B64700, #F66100);
   border-radius: 15%;
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  background: linear-gradient(145deg, #8a96ab, #CADCFC);
+  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
 }
 .speak span{
   font-size: 20px;
-  color: #fff;
-}
-.mic{
-  height: 70px;
-  width: 70px;
-  border: none;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(145deg, #B64700, #F66100);
-  border-radius: 15%;
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  color: #00246B;
 }
 .mic span{
   font-size: 20px;
-  color: #fff;
-}
-.star{
-  height: 70px;
-  width: 70px;
-  border: none;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(145deg, #B64700, #F66100);
-  border-radius: 15%;
-  box-shadow: 9.91px 9.91px 15px #C34C00, -9.91px -9.91px 15px #E95C00;
+  color: #00246B;
 }
 .star span{
   font-size: 20px;
-  color: #fff;
+  color: #00246B;
 }
 .footer button:hover{
   color: #fff;
-  background: #D65400;
+  background: #8a96ab;
   border-radius: 15%;
-  box-shadow: inset 9.91px 9.91px 15px #C34C00, inset -9.91px -9.91px 15px #E95C00;
+  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
 }
+
 
