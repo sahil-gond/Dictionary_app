@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border:  2px solid white; */
 }
 body{
   display: flex;
@@ -9,34 +10,35 @@ body{
   justify-content: center;
   height: 100svh;
   width: 100svw;
-  background: #8a96ab;
+  background: #35374B;
 }
 .hist-main{
   position: relative;
   height: 100vh;
   max-height: 100vh;
-  min-width: 320px;
+  min-width: 360px;
   max-width: 480px;
-  background: linear-gradient(145deg, #8a96ab, #CADCFC);
-  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
+  background: linear-gradient(145deg, #35374B, #344955);
+  box-shadow: 9.91px 9.91px 15px #35374B, -9.91px -9.91px 15px #344955;
 }
 .hist-head{
   width: 100%;
-  height: 55px;
+  height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #00246B;
-  background: linear-gradient(145deg, #8a96ab, #CADCFC);
-  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
+  color: #78A083;
+  background: linear-gradient(145deg, #35374B, #344955);
+  box-shadow: 9.91px 9.91px 15px #35374B, -9.91px -9.91px 15px #344955;
 }
 .head h3{
   font-weight: 800;
 }
 div .historyList{
   width: 100%;
-  max-height: 600px;
+  max-height: 70%;
+  min-height: 70%;
   overflow-y: auto; 
   padding: 10px;
 }
@@ -50,10 +52,11 @@ div .historyList{
   cursor: pointer;
   position: relative;
   margin-block: 8px;
-  background: #8a96ab;
+  background: #35374B;
   border-radius: 15px;
-  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
-  font-weight: 800;
+  box-shadow: inset 9.91px 9.91px 15px #35374B, inset -9.91px -9.91px 15px #344955;
+  font-weight: 500;
+  color: #78A083;
 }
 ul li span{
   position: absolute;
@@ -66,43 +69,50 @@ ul li span{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: linear-gradient(145deg, #8a96ab, #CADCFC);
-  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
+  background: linear-gradient(145deg, #35374B, #344955);
+  box-shadow: 9.91px 9.91px 15px #35374B, -9.91px -9.91px 15px #344955;
  }
  ul li span i{
-  color: #fff;
+  color: #78A083;
   font-size: 26px;
  }
  ul li span:hover{
-  background: #8a96ab;
+  background: #35374B;
   border-radius: 50%;
-  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
+  box-shadow: inset 9.91px 9.91px 15px #35374B, inset -9.91px -9.91px 15px #344955;
+}
+ul li span i:hover{
+   color: #344955;
  }
 .back-btn{
-  margin-top: 20px;
+  height: 15%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .back-btn button{
-  position: absolute;
-  bottom: 20px;
+  /* position: absolute;
+  bottom: 40px; */
   height: 50px;
   width: 50px;
   border-radius: 15px;
   border: none;
   cursor: pointer;
-  border-radius: 10px;
-  background: linear-gradient(145deg, #8a96ab, #CADCFC);
-  box-shadow: 9.91px 9.91px 15px #8a96ab, -9.91px -9.91px 15px #CADCFC;
+  background: linear-gradient(145deg, #35374B, #344955);
+  box-shadow: 9.91px 9.91px 15px #35374B, -9.91px -9.91px 15px #344955;
 }
 .back-btn button span a{
+  color: #78A083;
   text-decoration: none;
   text-align: center;
   font-size: 20px;
 }
 .back-btn button:hover{
-  background: #8a96ab;
+  background: #35374B;
   border-radius: 15%;
-  box-shadow: inset 9.91px 9.91px 15px #8a96ab, inset -9.91px -9.91px 15px #CADCFC;
+  box-shadow: inset 9.91px 9.91px 15px #35374B, inset -9.91px -9.91px 15px #344955;
+}
+.back-btn button i:hover{
+  color: #344955;
 }
